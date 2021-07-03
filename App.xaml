@@ -1,0 +1,140 @@
+﻿<Application x:Class="InvoicingSystem.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:InvoicingSystem"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <!-- Form Text Fields -->
+        <Style TargetType="TextBlock" x:Key="FormText">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Foreground" Value="#495057"/>
+        </Style>
+
+        <!-- Form Input Fields -->
+        <Style TargetType="TextBox" x:Key="InputField">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="#ced4da"/>
+        </Style>
+
+        <!-- Form Date Fields -->
+        <Style TargetType="DatePicker" x:Key="DateField">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="#ced4da"/>
+        </Style>
+
+        <!-- Window Exit Button -->
+        <Style TargetType="Button" x:Key="ExitButton">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="30px" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#e5e5dc" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Preview Section Text Fields -->
+        <Style TargetType="TextBlock" x:Key="PreviewText">
+            <Setter Property="FontSize" Value="5"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Margin" Value="0,0,0,1"/>
+        </Style>
+
+        <!-- Preview Section Labels -->
+        <Style TargetType="Label" x:Key="PreviewLabel">
+            <Setter Property="FontSize" Value="5"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <!-- Preview Section Print Button -->
+        <Style TargetType="Button" x:Key="PrintButton">
+            <Setter Property="Background" Value="#c4a35a"/>
+            <Setter Property="Foreground" Value="white"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Margin" Value="0,50,0,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="120px" Height="33px" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#E1BE74" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Preview Section Reset Button -->
+        <Style TargetType="Button" x:Key="ResetButton">
+            <Setter Property="Background" Value="white"/>
+            <Setter Property="Foreground" Value="#c4a35a"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Margin" Value="0,25,0,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="120px" Height="33px" Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="#c4a35a">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#e5e5dc" />
+                </Trigger>
+            </Style.Triggers>
+
+
+
+        </Style>
+
+        <!-- Invoice Window Text Fields -->
+        <Style TargetType="TextBlock" x:Key="InvoiceText">
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Margin" Value="0,0,0,1"/>
+        </Style>
+
+        <!-- Invoice Window Labels -->
+        <Style TargetType="Label" x:Key="InvoiceLabel">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <!-- Invoice Window Labels -->
+        <Style TargetType="Label" x:Key="TableInvoiceLabel">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Padding" Value="0,5"/>
+        </Style>
+
+    </Application.Resources>
+    
+</Application>
